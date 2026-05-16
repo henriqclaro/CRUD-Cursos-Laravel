@@ -25,7 +25,7 @@
                             <td>{{ $row->descricao }}</td>
                             <td>{{ $row->publicado }}</td>
                             <td>{{ $row->valor }}</td>
-                            <td><img src="{{ asset($row->imagem) }}" alt="{{ $row->titulo }}"></td>
+                            <td><img src="{{ asset($row->imagem) }}" alt="{{ $row->titulo }}" style="width: 150px"></td>
                             <td> <!-- COLUNA COM ALTERAR E EXCLUIR -->
                                 <a class='btn deep-orange' href="{{ route('admin.cursos.editar', $row->id) }}">Alterar</a>
                                 <a class='btn rede' href="{{ route('admin.cursos.excluir', $row->id) }}">Excluir</a>

@@ -2,9 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['uses' => 'App\Http\Controllers\Admin\CursoController@index']);
 
 Route::get(
     '/admin/cursos',
@@ -22,7 +20,7 @@ Route::get(
     ]
 );
 
-Route::get(
+Route::post(
     '/admin/cursos/salvar',
     [
         'as' => 'admin.cursos.salvar',
